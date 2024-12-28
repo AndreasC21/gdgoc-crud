@@ -27,24 +27,24 @@ document.addEventListener("keydown", function (event) {
 });
 
 //JIKA USER MEMAKSA MEMBUKA INSPECT ELEMENT, AKAN DIARAHKAN KE ABOUT:BLANK
-setInterval(function () {
-  if (window.outerWidth - window.innerWidth > 100) {
-    window.location.href = "about:blank";
-  }
+// setInterval(function () {
+//   if (window.outerWidth - window.innerWidth > 100) {
+//     window.location.href = "about:blank";
+//   }
 
-  const isResponsiveMode =
-    window.innerWidth !== window.outerWidth ||
-    window.screen.width !== window.innerWidth ||
-    (window.outerHeight < window.screen.height &&
-      window.outerWidth < window.screen.width);
+//   const isResponsiveMode =
+//     window.innerWidth !== window.outerWidth ||
+//     window.screen.width !== window.innerWidth ||
+//     (window.outerHeight < window.screen.height &&
+//       window.outerWidth < window.screen.width);
 
-  if (
-    isResponsiveMode &&
-    (window.devicePixelRatio !== 1 || window.outerWidth !== window.innerWidth)
-  ) {
-    window.location.href = "about:blank";
-  }
-}, 100);
+//   if (
+//     isResponsiveMode &&
+//     (window.devicePixelRatio !== 1 || window.outerWidth !== window.innerWidth)
+//   ) {
+//     window.location.href = "about:blank";
+//   }
+// }, 100);
 
 //LOAD FILM YANG TERSIMPAN DI LOCALSTORAGE
 window.onload = function () {
