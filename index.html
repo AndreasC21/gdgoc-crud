@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tracking Film</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>Tracking Film</h1>
+    <p>Trackinglah film-film atau series favoritmu!</p>
+    <main>
+      <section class="content" id="addFilm">
+        <form id="add">
+          <div class="nama">
+            <label for="nama">Judul:</label>
+            <input type="text" id="nama" name="nama" required />
+          </div>
+
+          <select id="status" name="status" required>
+            <option value="watching">Watching</option>
+            <option value="on_hold">On Hold</option>
+            <option value="dropped">Dropped</option>
+            <option value="plan_to_watch">Plan to Watch</option>
+            <option value="completed">Completed</option>
+          </select>
+
+          <div class="eps">
+            <label for="eps">Episode:</label>
+            <input type="number" id="eps" name="eps" required />
+          </div>
+
+          <input type="submit" value="Submit" />
+        </form>
+      </section>
+      <section class="content" id="listFilm">
+        <h2>Daftar Film</h2>
+        <table id="tableFilm">
+          <thead>
+            <tr>
+              <th>Foto</th>
+              <th>Judul</th>
+              <th>Status</th>
+              <th>Episode</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="list"></tbody>
+        </table>
+      </section>
+      <footer>
+        <p>
+          I don't own the rights of all assets in this website. Using
+          <a
+            href="https://developer.themoviedb.org/reference/intro/getting-started"
+            target="_blank"
+            >The Movie Database (TMDB) API</a
+          >
+          for generate cover image.
+        </p>
+      </footer>
+    </main>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

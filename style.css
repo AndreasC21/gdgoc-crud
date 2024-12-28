@@ -1,0 +1,130 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  font-family: "Gabarito", serif;
+  margin: 0 10em;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: ease 1s;
+
+  /* MENGHINDARI USER UNTUK BLOK TEXT (COPY) */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  display: flex;
+}
+
+button,
+input[type="submit"],
+select {
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 5px 10px;
+  box-shadow: 1px 0.5px 2px 0.5px rgba(0, 0, 0, 1);
+}
+
+button:hover,
+input[type="submit"]:hover {
+  cursor: pointer;
+  background-color: #c6c6da;
+  transition: ease 0.5s;
+}
+
+label,
+input,
+select {
+  margin: 10px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 4px;
+}
+
+table {
+  width: 60%;
+  border: solid 1px black;
+  border-radius: 10px;
+  box-shadow: 1px 0.5px 2px 0.5px rgba(0, 0, 0, 1);
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+}
+
+button {
+  margin-left: 5px;
+}
+
+a {
+  color: black;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+.fade-out {
+  animation: fadeOut 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    margin: 0 1em;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  form {
+    margin: 0 auto;
+    flex-direction: column;
+    width: 50%;
+  }
+
+  .nama,
+  .eps {
+    display: flex;
+    flex-direction: column;
+  }
+
+  label {
+    margin: 0;
+  }
+}
